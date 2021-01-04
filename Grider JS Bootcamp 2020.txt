@@ -1,0 +1,125 @@
+Grider JS Bootcamp 2020
+
+Material UI 
+Live Server
+
+Primitive Types:
+In order to work with data, we need to understand the primitive data types and their characteristics
+- Number
+- String
+- Boolean
+- Null
+- Undefined
+
+  - Number: only type of number, positive, negative, whole (integers), decimals (floats)
+
+  - operations: +, -, /, *, %, ** (exponent)
+    modulo gives remainder (divides second oeprand into first and gives remainder) 
+    division gives you the quotient
+    > Order of operations 
+      - PEMDAS
+  - NaN = not a number, but is a numeric value but not a number (integer or decimal)
+  ~ Infinity, and negative infinity, and 0 and negative 0 are special values
+
+  - Booleans
+    - small space bc they only can have one value
+    = true, false, yes, no, 1, 0
+    * you can change a variable type 
+  
+  - Strings
+    - 'string', "string", `string`
+    * typeof is a special value which will tell us the type of value if we pass in a variable
+    - strings are indexed, starting at position 0, every character has a positional number
+    - every string has built-in properties, for example string.length will give us the length of all characters including spaces of a string
+    - we can access individual characters of a string via stringName[index]
+      > we can find the last character via stringName[stringName.length -1]
+
+    - String Methods
+      thing.method()
+      - toUppercase, toLowercase etc...
+      - check MDN for reference.
+      - original value is unchanged
+      - we can chain methods...thing.color().toUppercase() and it runs sequentially
+
+      > Methods pt 2 -> all of these have at least one passed in argument
+        - thing.method(argument)
+          string.indexOf(argument) will return the index that matches the passed argument
+            > case sensitive, if more than one matches the argument, it will pass the 1st matches
+          string.slic(argument) will take the string after the argument passed
+            > one can pass two numbers which will tell the method to start, and end at the two passed arguments respectively.
+          string.replace(arguemnt) one can replace a portion of the string with the passed argument, it replaces the 1st occurance.
+
+  - Variables:
+    let or const
+      can be created two ways:
+      1)  let variableName = value
+      now we can use this value, store, update etc.
+        we can update it by variableName = value + change
+        now variableName = a new amount
+      2) const variableName = value 
+        one cannot change const once set
+        values that have names and need to be passed around are easier than using for example Pi
+    We are not on team Var
+
+  - Unary operaters
+      +=, -=, *=, /=, will incerment or decrement
+      single sided ++, --, will increment or decrement
+
+  - String escape:
+    \n = newline
+    \' single quote character
+    \" double quotes character
+    \\ backslash character 
+
+  - String Template Literals:
+    These allow for expressions to be evaluated within the string, variables can be assgined inside the string and passed into the string.
+    `` use back ticks to let JS know we want to use these
+    We can pass in using `${expression or otherwise}` the information inbetween the back ticks will be evaluted and returned to the string. 
+    We are interpolating data using string template literals
+      > Example:
+        const minAge = 21
+        let yourAge = 19
+        `You must be ${minAge} to enter. Come back in ${minAge - yourAge} years.`
+
+  - Null and Undefined:
+    Null is the intentional absence of value, and must be assigned. 
+    Undefined is a variable that doesn't have a value assigned to it, for example a declared variable but not yet assigned. 
+
+  - Math Object:
+  collection of mathematical methods/values available.
+    Math.PI
+    Math.floor()- chops off the decimal position
+    Math.round() - rounds up or down
+    Math.abs()
+    Math.pow() - raises to the power
+    Math.random() - generates random numbers, commonly in games or animations
+    - we don't pass in any arguments, we use the decimal between 0-1 as a seed, for generating actual random numbers
+      > Example of dice roll: Math.random() * 6, which gives us a random seed, Math.floor(Math.random() * 6) + 1 will get us the rest of the way there
+  
+  - typeOf XX: we specify any element after and it will return the type of that value. It's an operator, and requires no parentheses. It is evaluted left -> right.
+
+  -parseInt and parseFloat:
+     parseInt returns just the integer of the argument passed in unless it is NaN
+     parseFloat returns the decimal of the argument pased in.
+     We can use parseInt to get strings from a form into a number
+  
+  -Boolean (aka the coolest name of any of the primitive types)
+    Decision making based on true/false condition. We see this log-ins or different areas of applicaitons. 
+
+  - Comparison operators: We want to compare values or type
+    > greater than; returns a Boolean
+    < less than; returns a Boolean
+    >= greater than or equal to; returns a Boolean
+    <= less than or equal to; returns a Boolean
+
+    We will use them to compare and THEN make changes to input or output based on the state of this comparison
+
+    Refer to Unicode to understand order in values. It is not alphabetical order. 
+
+    == equality: checks for equality of values; it coerces both values to the same type and compares them. This can get wonky with number to string comparisons, due to the coercion. 0 == false, and null == undefined will return equality. 
+    === strict equality: compares the values to include type. It is more precise. Usually what you want is === due to precision. 
+
+    != equal: the analog of ==, is not equal 
+    
+    !== strict non-equality: the analog of ===, is not equal to include type checking. Prefer this for precision. 
+
